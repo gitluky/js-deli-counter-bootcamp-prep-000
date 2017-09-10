@@ -1,25 +1,25 @@
 katzDeliLine = []
 
-function takeANumber(line,name){
-  line.push(name)
-  return `Welcome ${name}. You are number ${line.indexOf(name)+1} in line.`
+function takeANumber(katzDeliLine,name){
+  katzDeliLine.push(name)
+  return `Welcome ${name}. You are number ${katzDeliLine.indexOf(name)+1} in line.`
 }
 
-function nowServing(line){
-  if (line.length < 1){
+function nowServing(katzDeliLine){
+  if (katzDeliLine.length < 1){
     return "The line is currently empty"
   }
   else{
-    var currentCustomer = line[0]
-    line.shift()
+    var currentCustomer = katzDeliLine[0]
+    katzDeliLine.shift()
     return `Currently serving ${currentCustomer}.`
   }
 }
 
-function currentLine(line){
+function currentLine(katzDeliLine){
   var queue = []
-  for (var i = 0; i < line.length; i++){
-      queue.push(`${i+1}. ${line[i]} `)
+  for (var i = 0; i < katzDeliLine.length; i++){
+      queue.push(`${i+1}. ${katzDeliLine[i]} `)
     }
   return 'The line is currently: ' + queue
 }
